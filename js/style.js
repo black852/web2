@@ -135,7 +135,7 @@ $(document).ready(function() {
 
 
     setInterval(BANNER_AUTOPLAY, 3000)
-    var i = 0;
+    var i = 1;
 
     function BANNER_AUTOPLAY() {
 
@@ -147,7 +147,8 @@ $(document).ready(function() {
             $('.DOT:eq(' + i + ')').css({ 'background-color': 'rgb(255, 0, 149)' })
             i++;
             if (i > 4) { i = 0 }
-        })
+        });
+        return 3000;
 
 
     }

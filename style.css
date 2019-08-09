@@ -41,7 +41,7 @@ h3 {
 
 /*--other--------------------------------------------------------------------------------------------------*/
 
-.clear {
+.clearr {
     clear: both;
 }
 
@@ -119,6 +119,22 @@ h3 {
     color: white;
 }
 
+.MORE {
+    text-align: right;
+    width: 1200px;
+    margin: -15px auto 0 auto;
+}
+
+.MORE a {
+    font-size: 15px;
+    color: #F071AB;
+    font-family: "AdobeFanHeitiStd-Bold";
+}
+
+.MORE a:active {
+    color: rgb(236, 47, 132);
+}
+
 .DOT_BOX {
     width: 200px;
     display: flex;
@@ -150,7 +166,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    background-image: url(image/header_bg_1.jpg);
+    background-color: rgb(231, 120, 120);
 }
 
 #LOGO {
@@ -252,37 +268,37 @@ nav ul li a:hover {
     width: 100%;
 }
 
+@media(max-width:1200px) and (min-width:400px) {
+    .w1200 {
+        width: 100%;
+    }
+    nav ul li a {
+        font-size: 15px;
+    }
+    hr {
+        width: 100%;
+    }
+    .MORE {
+        width: 100%;
+    }
+    .ITEM_BOX_ITEM {
+        width: 25%;
+    }
+    .ITEM_BOX_ITEM img {
+        width: 100%;
+    }
+}
+
 
 /*--index.html-------------------------------------------------------------------------------------------*/
 
-.MORE {
-    text-align: right;
-    width: 1200px;
-    margin: -35px auto 0 auto;
-}
-
-.MORE a {
-    font-size: 15px;
-    color: #F071AB;
-    font-family: "AdobeFanHeitiStd-Bold";
-}
-
-.MORE a:active {
-    color: rgb(236, 47, 132);
-}
-
 .BEAUTY {
-    column-count: 4;
-    column-gap: 5px
-}
-
-.BEAUTY a {
-    width: 300px;
+    column-count: 5;
+    column-gap: 5px;
 }
 
 .BEAUTY img {
     width: 100%;
-    border: 1px solid black
 }
 
 
@@ -397,7 +413,7 @@ h1+span {
 
 .NEWS_VIDEO span+span {
     float: right;
-    margin-top: 0px;
+    margin-top: 10px;
     font-size: 20px;
 }
 
@@ -418,7 +434,6 @@ h1+span {
 .NEWS_VIDEO h2 {
     width: 100%;
     font-size: 20px;
-    margin: -10px 0;
 }
 
 .NEWS_VIDEO hr {
