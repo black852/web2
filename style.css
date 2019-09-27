@@ -41,7 +41,7 @@ h3 {
 
 /*--other--------------------------------------------------------------------------------------------------*/
 
-.clearr {
+.clear {
     clear: both;
 }
 
@@ -52,19 +52,28 @@ h3 {
 
 .RIGHT_LINK {
     z-index: 1;
-    color: #7b7b7b;
-    padding-top: 10px;
-    font-size: 16px;
-    text-align: center;
-    line-height: 18px;
-    width: 80px;
-    height: 270px;
     background-color: rgba(244, 227, 255, 0.678);
     position: fixed;
-    right: 0;
+    right: 0px;
+    bottom: 210px;
+    border-radius: 10px 10px 0px 0px;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100px;
+}
+
+.RIGHT_LINK img {
+    vertical-align: bottom;
+    padding: 3px;
+}
+
+.RIGHT_LINK:hover {
+    transition: .5s;
     bottom: 0;
-    border-radius: 10px;
-    font-family: "AdobeFanHeitiStd-Bold";
 }
 
 .test {
@@ -108,7 +117,6 @@ h3 {
     color: #F071AB;
     width: 100px;
     height: 25px;
-    ;
     margin: 50px auto 0 auto;
     line-height: 25px;
     text-align: center;
@@ -166,7 +174,8 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    background-color: rgb(231, 120, 120);
+    background: linear-gradient(50deg, rgb(255, 218, 239)3%, rgb(255, 253, 254)55%);
+    ;
 }
 
 #LOGO {
@@ -250,6 +259,7 @@ nav ul li a:hover {
 .BEAUTY_PROJECT_NAV:hover ul {
     display: flex;
     justify-content: space-around;
+    z-index: 2;
 }
 
 .BEAUTY_PROJECT_NAV_LIST .TRIANGLE {
@@ -268,12 +278,15 @@ nav ul li a:hover {
     width: 100%;
 }
 
-@media(max-width:1200px) and (min-width:400px) {
+@media(max-width:1200px) and (min-width:300px) {
     .w1200 {
         width: 100%;
     }
     nav ul li a {
         font-size: 15px;
+    }
+    nav ul li {
+        width: 25%;
     }
     hr {
         width: 100%;
@@ -285,6 +298,12 @@ nav ul li a:hover {
         width: 25%;
     }
     .ITEM_BOX_ITEM img {
+        width: 100%;
+    }
+    .TEAM_BOX_ITAM {
+        width: 100%;
+    }
+    .TEAM_BOX_ITAM img {
         width: 100%;
     }
 }
@@ -512,6 +531,8 @@ h1+span {
 
 .BEAUTY_PROJECT_BG {
     background-image: url(image/bg0_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .BEAUTY_PROJECT_LIST_BOX {
@@ -848,20 +869,29 @@ h1+span {
     display: none;
     text-align: center;
     top: 150px;
-    right: 150px;
+    right: 2%;
     position: fixed;
-    width: 300px;
-    height: 600px;
+    width: 15%;
     box-shadow: 0.1px 0.1px 5px rgb(177, 177, 177);
+    font-family: "AdobeFanHeitiStd-Bold";
 }
 
 .MINI_LIST p {
     margin: 0 auto;
+    width: 90%;
+}
+
+.MINI_LIST img {
+    width: 90%;
 }
 
 .LIST_CLOSE {
     text-align: left;
     margin: 10px 0 0 10px;
+}
+
+.LIST_CLOSE img {
+    width: 10%;
 }
 
 .CALENDAR {
@@ -919,21 +949,26 @@ h1+span {
     font-family: "AdobeFanHeitiStd-Bold";
     margin: 20px auto 30px auto;
     width: 800px;
-    height: 700px;
     border-radius: 25px;
     box-shadow: 0.1px 0.1px 5px rgb(177, 177, 177);
+    text-align: center;
 }
 
 .RESERVATION h2 {
     color: #7b7b7b;
     font-size: 50px;
     width: auto;
-    text-align: center;
 }
 
-.RESERVATION input {
+.RESERVATION :not() {
+    text-align: left;
+}
+
+input[type=text],
+[type=tel],
+[type=email] {
     font-size: 40px;
-    width: 500px;
+    width: 100%;
     height: 40px;
     border-radius: 5px;
     border: 0;
@@ -946,19 +981,22 @@ h1+span {
 }
 
 .CHICK_BOX input {
-    margin: 0 10px;
     width: 20px;
     height: 20px;
-    border-radius: 0px;
-    border: 0;
-    box-shadow: 0px 0px 0px;
+    margin-right: 10px;
 }
 
-.CONFIRM_RESERVATION {
-    text-align: center;
+.CHICK_BOX input:nth-of-type(even) {
+    margin-left: 10px;
 }
 
-.RESERVATION button {
+textarea[name=question] {
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 150px;
+}
+
+input:last-child {
     background-color: #F071AB;
     border: 0;
     border-radius: 5px;
@@ -968,9 +1006,11 @@ h1+span {
     font-size: 25px;
     font-family: "AdobeFanHeitiStd-Bold";
     line-height: 40px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.RESERVATION button:active {
+input[type=submit]:active {
     background-color: rgb(236, 47, 132);
 }
 
